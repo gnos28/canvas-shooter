@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Canvas Shooter</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="shooter"></div>
+        <div class="contenu scores active" id="scores">
+        </div>
+        <div class="contenu changelog" id="changelog">
+            <h1>v0.2</h1>
+            <span>addition of changelog menu</span>
+            <span>new Power Up : BFG</span>
+            <span>new Power Up : shield</span>
+            <span>IA rework > taking into account elements direction & speed in addition to elements distance & angle</span>
+            <span>Friendly fire between enemies</span>
+            <span>Now each enemies got 5 possibles skill level which increase through game progression</span>
+            <h1>v0.1</h1>
+            <span>initial release</span>
+        </div>
+        <div class="menu">
+            <a href="#scores" class="link active">scores</a>
+            <a href="#changelog" class="link">changelog</a>
+        </div>
+    </div>
+    <form action="insert.php" method="POST" name="submit_score" id="submit_score" target="dummyframe">
+        <input type="text" name="date" id="date" hidden>
+        <input type="text" name="nickname" id="nickname" hidden>
+        <input type="number" name="score" id="score" hidden>
+        <input type="text" name="version" id="version" hidden>
+        <input type="submit" value="go" hidden>
+    </form>
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+</body>
+
+</html>

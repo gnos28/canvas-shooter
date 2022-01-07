@@ -1,0 +1,95 @@
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.shooter{
+    flex:none;
+    width: 800px;
+    height: 800px;
+    background-color: lightcyan;
+    position: relative;
+}
+
+.shooter canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contenu{
+    flex:none;
+    display: none;
+    /*
+    position:absolute;
+    top: 8px;
+    left:816px;
+    height: 790px;
+    */
+    width: 205px;
+    background-color: lightgray;
+    padding: 5px;
+    font-family: "Orbitron";
+    overflow: hidden;
+    margin-left:8px;
+    max-height: 790px;
+}
+
+.contenu.active{
+    display: block;
+}
+
+.contenu h1{
+    margin:10px 0 0 0;
+    font-size: 1.5rem;
+}
+
+.contenu h1:first-child{
+    margin:0;
+}
+
+.contenu span{
+    display: block;
+    margin:2px 0;
+    font-size: 0.8rem;
+}
+/*
+.contenu span::first-letter{
+    font-weight: bold;
+    text-transform: capitalize;
+}*/
+
+.contenu span::before{
+    content: "- ";
+}
+
+.menu{
+    flex:none;
+    display: flex;
+    flex-direction: column;
+}
+
+a.link{
+    padding: 16px 3px;
+    display: block;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration: none;
+    color:inherit;
+    font-family: "Orbitron";
+    background-color: rgb(235, 235, 235);
+}
+
+a.active{
+    background-color: lightgray;
+}
+
+.fade{
+    display:block;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.in{
+    opacity: 1;
+}
