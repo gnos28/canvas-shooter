@@ -713,6 +713,14 @@ function canvasShooter() // main fonction
 window.addEventListener("keypressed", downEvent)
 window.addEventListener("keyup", upEvent)
 
+// Put the game in pause
+document.body.onkeyup = function pause(event) {
+    if (event.keyCode == 32) {
+        alert("GAME IN PAUSE");
+    }
+}
+// End pause function
+
 function downEvent(event) // ajouter gestion 2 touches / tick
 {
     if (deathTick != "" && tick > deathTick && event.keyCode !== 13)
